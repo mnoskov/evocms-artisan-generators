@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Routing\Controller;
+
+class {{ class }} extends Controller
+{
+    protected $evo;
+
+    /**
+     * The main method before the template output
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->evo = evo();
+
+        $this->evo->addDataToView([
+            // ...
+        ]);
+    }
+}

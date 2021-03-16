@@ -1,0 +1,22 @@
+{
+    "name": "evolutioncms-services/artisan-generators",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikhail Noskov",
+            "email": "mail@mnoskov.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EvolutionCMS\\ArtisanGenerators\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EvolutionCMS\\ArtisanGenerators\\ArtisanGeneratorsServiceProvider"
+            ]
+        }
+    }
+}

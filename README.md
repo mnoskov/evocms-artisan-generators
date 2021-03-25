@@ -1,5 +1,7 @@
 # evocms-artisan-generators
 
+Перед использование нужно заполнить в настройках сайта используемый namespace
+
 ```
 php artisan make:controller TestController
 core/custom/packages/<Your namespace>/src/Controllers/TestController

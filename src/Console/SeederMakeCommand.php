@@ -2,6 +2,7 @@
 
 namespace EvolutionCMS\ArtisanGenerators\Console;
 
+use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -47,9 +48,20 @@ class SeederMakeCommand extends GeneratorCommand
      */
     protected function getPath($name)
     {
-        return EVO_CORE_PATH . '/database/seeders';
+        $name = Str::replaceFirst($this->rootNamespace(), '', $name);
+
+        return EVO_CORE_PATH . '/database/seeders/' . str_replace('\\', '/', $name) . '.php';
     }
 
+    /**
+     * Get the root namespace for the class.
+     *
+     * @return string
+     */
+    protected function rootNamespace()
+    {
+        return 'Database\\Seeders';
+    }
 
     /**
      * Get the stub file for the generator.

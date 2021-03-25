@@ -10,9 +10,10 @@ class ArtisanGeneratorsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->commands([
-            Console\ControllerMakeCommand::class,
             Console\ConsoleMakeCommand::class,
+            Console\ControllerMakeCommand::class,
             Console\ModelMakeCommand::class,
+            Console\SeederMakeCommand::class,
         ]);
     }
 }

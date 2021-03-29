@@ -13,5 +13,5 @@ php artisan make:model Test
 core/custom/packages/<Your namespace>/src/Models/Test
 
 php artisan make:seeder TestSeeder
-core/database/seeders/TestSeeder (need composer dump-autoload)
+core/database/seeders/TestSeeder
 ```

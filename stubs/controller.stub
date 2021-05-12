@@ -3,22 +3,37 @@
 namespace {{ namespace }};
 
 use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
-class {{ class }} extends Controller
-{
-    protected $evo;
+class {{ class }} extends Controller {
+	protected $evo;
 
-    /**
-     * The main method before the template output
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->evo = evo();
+	/**
+	* The main method before the template output
+	*
+	* @return void
+	*/
+	public function __construct() {
+	  $this->evo = evo();
+	}
 
-        $this->evo->addDataToView([
-            // ...
-        ]);
-    }
+	public function get(Request $req) {
+
+	}
+
+	public function getOne(int $id, Request $req) {
+
+   }
+
+	public function set(Request $req) {
+
+	}
+
+	public function update(int $id, Request $req) {
+
+	}
+
+	public function delete(int $id, Request $req) {
+
+	}
 }

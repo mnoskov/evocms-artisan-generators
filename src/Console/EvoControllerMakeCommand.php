@@ -5,20 +5,20 @@ namespace EvolutionCMS\ArtisanGenerators\Console;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class ControllerMakeCommand extends GeneratorCommand {
+class EvoControllerMakeCommand extends GeneratorCommand {
    /**
     * The console command name.
     *
     * @var string
     */
-   protected $name = 'make:controller';
+   protected $name = 'make:controller-evo';
 
    /**
     * The console command description.
     *
     * @var string
     */
-   protected $description = 'Create a new controller';
+   protected $description = 'Create a new EVO controller';
 
    /**
     * The type of class being generated.
@@ -42,7 +42,7 @@ class ControllerMakeCommand extends GeneratorCommand {
     * @return string
     */
    protected function getStub() {
-      return $this->getStubsPath() . 'controller.stub';
+      return $this->getStubsPath() . 'controller-evo.stub';
    }
 
    /**

@@ -9,6 +9,7 @@ class ArtisanGeneratorsServiceProvider extends ServiceProvider {
    public function register() {
       $this->commands([
          Console\ConsoleMakeCommand::class,
+         Console\EvoControllerMakeCommand::class,
          Console\ControllerMakeCommand::class,
          Console\ModelMakeCommand::class,
          Console\SeederMakeCommand::class,

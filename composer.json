@@ -2,6 +2,7 @@
   "name": "mnoskov/evocms-artisan-generators",
   "description": "Генераторы",
   "license": "MIT",
+  "type": "library",
   "authors": [
     {
       "name": "Mikhail Noskov",

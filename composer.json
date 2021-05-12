@@ -1,22 +1,29 @@
 {
-    "name": "mnoskov/evocms-artisan-generators",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mikhail Noskov",
-            "email": "mail@mnoskov.ru"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "EvolutionCMS\\ArtisanGenerators\\": "src"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "EvolutionCMS\\ArtisanGenerators\\ArtisanGeneratorsServiceProvider"
-            ]
-        }
+  "name": "mnoskov/evocms-artisan-generators",
+  "description": "Генераторы",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mikhail Noskov",
+      "email": "mail@mnoskov.ru"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EvolutionCMS\\ArtisanGenerators\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EvolutionCMS\\ArtisanGenerators\\ArtisanGeneratorsServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.17"
+  }
 }

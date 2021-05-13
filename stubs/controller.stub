@@ -5,7 +5,8 @@ namespace {{ namespace }};
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
-class {{ class }} extends Controller {
+class {{ class }} extends Controller
+{
 	protected $evo;
 
 	/**
@@ -13,27 +14,33 @@ class {{ class }} extends Controller {
 	*
 	* @return void
 	*/
-	public function __construct() {
+	public function __construct()
+	{
 	  $this->evo = evo();
 	}
 
-	public function get(Request $req) {
+	public function get(Request $req)
+	{
 
 	}
 
-	public function getOne(int $id, Request $req) {
+	public function getOne(int $id, Request $req)
+	{
 
-   }
+   	}
 
-	public function set(Request $req) {
-
-	}
-
-	public function update(int $id, Request $req) {
+	public function set(Request $req)
+	{
 
 	}
 
-	public function delete(int $id, Request $req) {
+	public function update(int $id, Request $req)
+	{
+
+	}
+
+	public function delete(int $id, Request $req)
+	{
 
 	}
 }

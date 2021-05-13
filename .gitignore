@@ -3,4 +3,4 @@ composer.lock
 tests
 .phpunit.result.cache
 .idea
-editorconfig
+.editorconfig

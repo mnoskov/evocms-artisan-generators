@@ -11,17 +11,17 @@ class {{ class }} extends Model
      * You can specify custom table name
      * @var string
      */
-    //public $table = '';
+    public $table = '';
 
     /**
      * You can specify the fields that will be assigned in the mass assignement
      * @var array
      */
-    //protected $fillable = [];
+    protected $fillable = [];
 
     /**
      * You can specify fields types for cast
      * @var array
      */
-    //protected $casts = [];
+    protected $casts = [];
 }

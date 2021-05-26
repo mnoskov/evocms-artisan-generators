@@ -7,40 +7,40 @@ use Illuminate\Http\Request;
 
 class {{ class }} extends Controller
 {
-	protected $evo;
+    protected $evo;
 
-	/**
-	* The main method before the template output
-	*
-	* @return void
-	*/
-	public function __construct()
-	{
-	  $this->evo = evo();
-	}
+    /**
+     * The main method before the template output
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->evo = evo();
+    }
 
-	public function get(Request $req)
-	{
+    public function get(Request $request)
+    {
 
-	}
+    }
 
-	public function getOne(int $id, Request $req)
-	{
+    public function getOne(int $id, Request $request)
+    {
 
-   	}
+    }
 
-	public function set(Request $req)
-	{
+    public function set(Request $request)
+    {
 
-	}
+    }
 
-	public function update(int $id, Request $req)
-	{
+    public function update(int $id, Request $request)
+    {
 
-	}
+    }
 
-	public function delete(int $id, Request $req)
-	{
+    public function delete(int $id, Request $request)
+    {
 
-	}
+    }
 }

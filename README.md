@@ -3,11 +3,7 @@
 Перед использованием нужно заполнить в настройках сайта используемый namespace
 
 ```
-Создать EVO контроллер
-php artisan make:controller-evo TestController
-core/custom/packages/<Your namespace>/src/Controllers/TestController
-
-Создать Laravel контроллер
+Создать контроллер
 php artisan make:controller TestController
 core/custom/packages/<Your namespace>/src/Controllers/TestController
 

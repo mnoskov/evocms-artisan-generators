@@ -5,3 +5,5 @@ tests
 .idea
 .editorconfig
 .editorconfig.*
+
+src/Console/EvoControllerMakeCommand.php

@@ -7,3 +7,4 @@ tests
 .editorconfig.*
 
 src/Console/EvoControllerMakeCommand.php
+stubs/controller-evo.stub

@@ -35,7 +35,7 @@ class MiddlewareMakeCommand extends GeneratorCommand
      */
     protected function getTargetDirectory()
     {
-        return 'Middlewares';
+        return 'Middleware';
     }
 
     /**

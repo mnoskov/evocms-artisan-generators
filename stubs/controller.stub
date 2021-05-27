@@ -80,7 +80,7 @@ class {{ class }} extends Controller
      * @tutorial [DELETE] /route/{id}
      *
      */
-    public function delete(int $id, Request $request)
+    public function delete(Request $request, int $id)
     {
         //...
     }

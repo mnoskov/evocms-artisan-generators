@@ -31,8 +31,9 @@ class ConsoleMakeCommand extends GeneratorCommand
     /**
      * Replace the class name for the given stub.
      *
-     * @param  string  $stub
-     * @param  string  $name
+     * @param string $stub
+     * @param string $name
+     *
      * @return string
      */
     protected function replaceClass($stub, $name)

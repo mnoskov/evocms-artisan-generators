@@ -1,0 +1,10 @@
+vendor
+composer.lock
+tests
+.phpunit.result.cache
+.idea
+.editorconfig
+.editorconfig.*
+
+src/Console/EvoControllerMakeCommand.php
+stubs/controller-evo.stub

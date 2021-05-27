@@ -3,6 +3,7 @@
 namespace {{ namespace }};
 
 use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
 class {{ class }} extends Controller
 {
@@ -16,9 +17,71 @@ class {{ class }} extends Controller
     public function __construct()
     {
         $this->evo = evo();
+    }
 
+    /**
+     * Отправка данных в шаблон evo
+     *
+     */
+    public function main() {
         $this->evo->addDataToView([
-            // ...
-        ]);
+            //...
+        ])
+    }
+
+
+    /**
+     * Получение всех данных
+     *
+     * @tutorial [GET] /route
+     *
+     */
+    public function get(Request $request)
+    {
+        //...
+    }
+
+    /**
+     * Получение определенной сущности
+     *
+     * @tutorial [GET] /route/{id}
+     *
+     */
+    public function getOne(Request $request, int $id)
+    {
+        //...
+    }
+
+    /**
+     * Добавление новой сущности
+     *
+     * @tutorial [POST] /route
+     *
+     */
+    public function set(Request $request)
+    {
+        //...
+    }
+
+    /**
+     * Обновление сущности
+     *
+     * @tutorial [PUT] /route/{id}
+     *
+     */
+    public function update(Request $request, int $id)
+    {
+        //...
+    }
+
+    /**
+     * Удаление определенной сущности
+     *
+     * @tutorial [DELETE] /route/{id}
+     *
+     */
+    public function delete(Request $request, int $id)
+    {
+        //...
     }
 }

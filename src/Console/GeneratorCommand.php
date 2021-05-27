@@ -40,7 +40,8 @@ class GeneratorCommand extends IlluminateGeneratorCommand
     /**
      * Get the default namespace for the class.
      *
-     * @param  string  $rootNamespace
+     * @param string $rootNamespace
+     *
      * @return string
      */
     protected function getDefaultNamespace($rootNamespace)
@@ -62,14 +63,28 @@ class GeneratorCommand extends IlluminateGeneratorCommand
     /**
      * Get the destination class path.
      *
-     * @param  string  $name
+     * @param string $name
+     *
      * @return string
      */
     protected function getPath($name)
     {
         $parts = explode('\\', trim($name, '\\'));
-        $dirPath = $this->getTargetDirectory() . '\\' . array_pop($parts);
-        array_pop($parts);
+
+        if (count($parts) > 3) {
+            $dirPath = implode(
+                '\\',
+                [
+                    $this->getTargetDirectory(),
+                    implode('\\', array_splice($parts, 3))
+                ]
+            );
+            $parts = array_splice($parts, 0, 2);
+        } else {
+            $dirPath = $this->getTargetDirectory() . '\\' . array_pop($parts);
+            array_pop($parts);
+        }
+
         $packageName = array_pop($parts);
         $providerName = $packageName . 'ServiceProvider';
         $providerClass = implode('\\', $parts) . '\\' . $packageName . '\\' . $providerName;
@@ -80,6 +95,8 @@ class GeneratorCommand extends IlluminateGeneratorCommand
 
         $reflector = new \ReflectionClass($providerClass);
         $path = $reflector->getFileName();
+
+        $dirPath = str_replace('\\', '/', $dirPath);
         $path = str_replace($providerName, $dirPath, $path);
 
         return $path;

@@ -14,6 +14,7 @@ class ArtisanGeneratorsServiceProvider extends ServiceProvider
             Console\ControllerMakeCommand::class,
             Console\ModelMakeCommand::class,
             Console\SeederMakeCommand::class,
+            Console\MiddlewareMakeCommand::class
         ]);
     }
 }
